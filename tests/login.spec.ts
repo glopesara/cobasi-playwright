@@ -26,3 +26,39 @@ test.describe('realizar login com sucesso', () => {
   })
 })
 
+test.describe('tentativa de login', () => {
+  test('tentativa de login sem e-mail', async () => {
+    const user: UserModel = data.userWithoutEmail
+
+    await loginPage.goToPageLogin()
+    await loginPage.optionsLogin('Entrar com email e senha')
+
+    await loginPage.login(user)
+
+    await loginPage.validateAlert()
+  })
+
+  test('tentativa de login sem senha', async () => {
+    const user: UserModel = data.userWithoutPass
+
+    await loginPage.goToPageLogin()
+    await loginPage.optionsLogin('Entrar com email e senha')
+
+    await loginPage.login(user)
+
+    await loginPage.validateAlert()
+  })
+
+  test('tentativa de login sem e-mail e sem sengha', async () => {
+    const user: UserModel = data.userWithoutEmailAndPass
+
+    await loginPage.goToPageLogin()
+    await loginPage.optionsLogin('Entrar com email e senha')
+
+    await loginPage.login(user)
+
+    await loginPage.validateAlert()
+  })
+})
+
+

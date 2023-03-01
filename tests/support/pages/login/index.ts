@@ -42,4 +42,9 @@ export class LoginPage {
         const validate = this.page.locator('css=span >> text=Olá')
         await expect(validate).toBeVisible()
     }
+
+    async validateAlert(){
+        const validate = this.page.locator('css=span >> text=E-mail ou senha inválidos.')
+        await expect(validate).toBeVisible()
+    }
 }

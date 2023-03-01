@@ -2,6 +2,19 @@
     "user": {
         "email": "hixeri6988@pubpng.com",
         "pass": "Teste@123"
-    }
+    },
+    "userWithoutEmail":{
+        "email": "",
+        "pass": "Teste@123"
+    },
+
+    "userWithoutPass":{
+        "email": "hixeri6988@pubpng.com",
+        "pass": ""
+    },
     
+    "userWithoutEmailAndPass":{
+        "email": "",
+        "pass": ""
+    }
 }
